@@ -80,13 +80,17 @@ and open the template in the editor.
 }
 
 .item-in-pattern {
-    width: 40vmin;
+    width: 10vmin;
+    margin: 0 5px;
 }
 
 .item-at-bottom {
     width: 10vmin;
 }
 
+#level-selector {
+    font-size: 24px;
+}
 
 .item-button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -114,7 +118,7 @@ and open the template in the editor.
 }
 
 #question-mark {
-    font-size: 40vmin;
+    font-size: 10vmin;
     line-height: 1.0;
     
     font-family: Helvetica, Arial, sans-serif;

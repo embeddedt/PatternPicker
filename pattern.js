@@ -8,8 +8,6 @@ var level = 1;
 
 var delay = 500;
 
-var shown = false;
-
 var questionsAnswered;
 var currentTimeout;
 
@@ -18,26 +16,20 @@ function sortNumber(a, b) {
 }
 
 function displayPattern(callback) {
-    var patternIdx = 0;
-    shown = false;
-    clearTimeout(currentTimeout);
-    var patternFunc = function() {
-        if(shown) {
-            shown = false;
-            showPattern(-2);
-        } else if(patternIdx === pattern.length) {
-            showPattern(-1);
-            if(callback !== undefined)
-                callback();
-            return;
-        } else {
-            showPattern(pattern[patternIdx]);
-            patternIdx++;
-            shown = true;
+    $("#pattern-list").empty();
+    for(var j = 0; j < getRandomInt(2, 3); j++) {
+        for(var i = 0; i < pattern.length; i++) {
+            var $patternitem = $($(".item-in-pattern")[pattern[i]]).clone();
+            console.log($patternitem[0]);
+            $("#pattern-list").append($patternitem);
         }
-        currentTimeout = setTimeout(patternFunc, delay);
-    };
-    patternFunc();
+    }
+    
+    var $question = $("#question-mark").clone();
+    $("#pattern-list").append($question);
+    $("#pattern-list").children().css({ display: '' });
+    
+    callback();
 }
 
 function generatePattern() {
@@ -83,16 +75,7 @@ function getRandomInt(min, max, skipIntegers) {
     return i;
 }
 
-function showPattern(i) {
-    $(".item-in-pattern").hide();
-    $("#question-mark").hide();
-    if(i >= 0)
-        $($(".item-in-pattern")[i]).show();
-    else if(i === -1)
-        $("#question-mark").show();
-    else
-        $("#blank-item").show();
-}
+
 $(window).load(function() {
     $(".item-button").not("#replay-button").not("#next-button").click(function() {
         var index = $(".item-buttons").children().index(this);
@@ -144,6 +127,5 @@ $(window).load(function() {
         $("#next-button").prop("disabled", true);
         $("#next-button").click();
     });
-    showPattern(0);
     
 });

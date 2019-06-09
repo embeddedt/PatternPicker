@@ -23,18 +23,19 @@ and open the template in the editor.
             </div>
             <b><span id="the-text">Which item comes next?</span></b>
             <p>
-            <div class="item item-in-pattern first-item-type square">
+            <div class="item item-in-pattern first-item-type square" style="display: none;">
             </div>
 
-            <div class="item item-in-pattern second-item-type square">
+            <div class="item item-in-pattern second-item-type square" style="display: none;">
             </div>
-            <div class="item item-in-pattern custom-item square">
+            <div class="item item-in-pattern custom-item square" style="display: none;">
                 <img src="trapezoid.svg"/>
             </div>
-            <div id="question-mark" class="item item-in-pattern custom-item square">
+            <div id="question-mark" class="item item-in-pattern custom-item square" style="display: none;">
                 <span>?</span>
             </div>
-            <div id="blank-item" class="item item-in-pattern square">
+            <div id="pattern-list">
+                
             </div>
             <p>
             <div class="item-buttons">
@@ -54,10 +55,10 @@ and open the template in the editor.
 
             </div>
             <p></p>
-            <button id="replay-button" class="item-button" onclick="displayPattern();">Replay pattern</button>
             <button id="next-button" class="item-button">Next pattern</button>
         </div>
         <div id="level-selector">
+            <p></p>
             <b>Choose a level:</b>
             <p></p>
             <label><input type="radio" name="level" value="1" /> Level 1</label>
