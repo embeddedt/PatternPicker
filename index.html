@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pattern Picker</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="jquery.ui.touch-punch.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="pattern.css">
+        <script src="pattern.js"></script>
+    </head>
+    <body>
+        <div id="application">
+            <div id="wrong-dialog">
+            </div>
+            <b><span id="the-text">Which item comes next?</span></b>
+            <p>
+            <div class="item item-in-pattern first-item-type square">
+            </div>
+
+            <div class="item item-in-pattern second-item-type square">
+            </div>
+            <div class="item item-in-pattern custom-item square">
+                <img src="trapezoid.svg"/>
+            </div>
+            <div id="question-mark" class="item item-in-pattern custom-item square">
+                <span>?</span>
+            </div>
+            <div id="blank-item" class="item item-in-pattern square">
+            </div>
+            <p>
+            <div class="item-buttons">
+                <button class="item-button">
+                    <span class="item item-at-bottom first-item-type square">
+                    </span>
+                </button>
+                <button class="item-button">
+                    <span class="item item-at-bottom second-item-type square">
+                    </span>
+                </button>
+                <button class="item-button">
+                    <span class="item item-at-bottom custom-item square">
+                        <img src="trapezoid.svg"/>
+                    </span>
+                </button>
+
+            </div>
+            <p></p>
+            <button id="replay-button" class="item-button" onclick="displayPattern();">Replay pattern</button>
+            <button id="next-button" class="item-button">Next pattern</button>
+        </div>
+        <div id="level-selector">
+            <b>Choose a level:</b>
+            <p></p>
+            <label><input type="radio" name="level" value="1" /> Level 1</label>
+            <br>
+            <label><input type="radio" name="level" value="2" /> Level 2</label>
+            <br>
+            <label><input type="radio" name="level" value="3" /> Level 3</label>
+            <br>
+            <label><input type="radio" name="level" value="4" /> Level 4</label>
+            <br>
+            <label><input type="radio" name="level" value="5" /> Level 5</label>
+            <p>
+            <button id="go-button" class="item-button">Go!</button>
+        </div>
+    </body>
+</html>

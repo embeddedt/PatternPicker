@@ -1,0 +1,164 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 5-Jun-2019, 1:42:58 PM
+    Author     : tt
+*/
+
+.square {
+    position: relative;
+    z-index: 0;
+}
+.square:before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    border-radius: inherit;
+    background-color: inherit;
+    z-index: 0;
+} 
+
+#the-text {
+    font-size: 8vmin;
+}
+
+.square:after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    display: inline-block;
+    border-radius: inherit;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.square:after {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.custom-item:after {
+    background-color: transparent;
+}
+
+.content > img {
+    max-width: 100%;
+    max-height: 100%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.square > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.first-item-type {
+    background-color: yellow;
+    display: inline-block;
+}
+
+.second-item-type {
+    background-color: red;
+    border-radius: 50%;
+}
+
+.item {
+    display: inline-block;
+}
+
+.item-in-pattern {
+    width: 40vmin;
+}
+
+.item-at-bottom {
+    width: 10vmin;
+}
+
+
+.item-button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
+	background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
+	background-color:#f9f9f9;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+        padding: 6px;
+        z-index: 1;
+        position: relative;
+	color:#666666;
+	text-decoration:none;
+}
+
+#question-mark {
+    font-size: 40vmin;
+    line-height: 1.0;
+    
+    font-family: Helvetica, Arial, sans-serif;
+}
+#question-mark > * {
+    line-height: inherit;
+}
+
+.item-button:hover:not(:disabled) {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
+	background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+	background-color:#e9e9e9;
+}
+.item-button:active:not(:disabled) {
+	position:relative;
+	top:1px;
+}
+
+
+.my-button:disabled, #question-mark > span, .noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+body, html {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+* {
+    font-family: 'Helvetica', 'Arial', sans-serif !important;
+    line-height: 1.1;
+}
