@@ -88,6 +88,10 @@ $(window).load(function() {
                 $("#the-text").text("Correct!");
             } else {
                 $("#the-text").text("Right! What's the item after that?");
+                var $patternitem = $($(".item-in-pattern")[index]).clone();
+                $patternitem.css({ display: '' });
+                console.log($("#pattern-list .item-in-pattern:last").html());
+                $("#pattern-list .item-in-pattern:last").before($patternitem);
                 choosingElement++;
                 return;
             }
@@ -98,7 +102,7 @@ $(window).load(function() {
             }
             $("#next-button").removeProp("disabled");
         } else {
-            $("#the-text").text("Nope. Replay the pattern if you're not sure.");
+            $("#the-text").text("Nope. Make sure you read the pattern closely.");
         }
     });
     $("#next-button").click(function() {
